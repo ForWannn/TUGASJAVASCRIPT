@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+      <div class="container">
+        <div class="header">
+          <div class="teks">
+            <h1>AVENGERS</h1>
+            <p>Get It Now</p>
+          </div>
+          <div class="bg">
+            <img src="img/avengers.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="halo" id="halo">
+        <button>HALLO</button>
+      </div>
+      <div class="hai">
+        <h4>Haii <span id="hai"></span></h4>
+      </div>
+      <div class="main">
+        <div class="kartu">
+          <div class="gambar">
+            <img src="img/infinity_war.jpg" alt="" />
+          </div>
+          <div class="teks">
+            <h3>AVENGERS INFINITY WAR</h3>
+          </div>
+          <div class="btn">
+            <div class="detail">
+              <button class="detail">Details</button>
+            </div>
+            <div class="buy">
+              <button class="buy">Buy Ticket</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="alert">
+        <div class="alert-content">
+          <i class="fas fa-solid fa-check check"></i>
+
+          <div class="pesan">
+            <span class="text text-1">Success</span>
+            <span class="text text-2">Your ticket has been booked</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-xmark tutup"></i>
+        <div class="line"></div>
+      </div>
+
+      <div class="film">
+        <div class="gambar">
+          <img src="img/infinity_war.jpg" alt="" />
+        </div>
+        <div class="teks">
+          <h2>AVENGERS INFINITY WAR</h2>
+          <p>
+            Avengers: Infinity War is a 2018 American superhero film based on
+            the Marvel Comics superhero team the Avengers. Produced by Marvel
+            Studios and distributed by Walt Disney Studios Motion Pictures, it
+            is the sequel to The Avengers (2012) and Avengers: Age of Ultron
+            (2015), and the 19th film in the Marvel Cinematic Universe (MCU).
+            Directed by Anthony and Joe Russo and written by Christopher Markus
+            and Stephen McFeely, the film features an ensemble cast including
+            Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans,
+            Scarlett Johansson, Benedict Cumberbatch, Don Cheadle, Tom Holland,
+            Chadwick Boseman, Paul Bettany, Elizabeth Olsen, Anthony Mackie,
+            Sebastian Stan, Danai Gurira, Letitia Wright, Dave Bautista, Zoe
+            Saldaña, Josh Brolin, and Chris Pratt. In the film, the Avengers and
+            the Guardians of the Galaxy attempt to stop Thanos from collecting
+            the six powerful Infinity Stones as part of his quest to kill half
+            of all life in the universe.
+          </p>
+          <div class="tombol">
+            <div class="kembali">
+              <button class="close">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <form action="" onsubmit="return validasi()" method="post">
+      <label for=""
+        >Nama
+        <input type="text" id="nama" placeholder="nama" />
+      </label>
+      <label for="">Email</label>
+      <input type="email" id="email" placeholder="email" />
+      <input type="submit" value="SUBMIT" />
+    </form>
+    <script>
+      function validasi() {
+        var nama = document.getElementById("nama").value;
+        var email = document.getElementById("email").value;
+
+        if (nama == "") {
+          alert("NAMO TU ISI DLU JOK!");
+          return false;
+        }
+
+        if (email == "") {
+          alert("Email ni kosong, isi lah dlu cubo");
+          return false;
+        }
+
+        if (pass == "") {
+          alert("pw kau apo yo??");
+          return false;
+        }
+
+        return true;
+      }
+    </script> -->
+
+    <script>
+      const btn = document.querySelector(".buy"),
+        alert = document.querySelector(".alert"),
+        tutup = document.querySelector(".tutup"),
+        film = document.querySelector(".film"),
+        line = document.querySelector(".line"),
+        close = document.querySelector(".close"),
+        detail = document.querySelector(".detail");
+
+      btn.addEventListener("click", () => {
+        alert.classList.add("active");
+        line.classList.add("active");
+        setTimeout(() => {
+          alert.classList.remove("active");
+        }, 5000);
+        setTimeout(() => {
+          line.classList.remove("active");
+        }, 5300);
+      });
+
+      tutup.addEventListener("click", () => {
+        alert.classList.remove("active");
+
+        setTimeout(() => {
+          line.classList.remove("active");
+        }, 300);
+      });
+
+      var hai = document.getElementById("halo");
+      hai.onclick = function () {
+        prompt("Masukkan nama anda");
+      };
+
+      detail.addEventListener("click", () => {
+        film.classList.add("active");
+      });
+
+      close.addEventListener("click", () => {
+        film.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
